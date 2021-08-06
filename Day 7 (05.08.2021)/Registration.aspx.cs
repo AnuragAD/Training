@@ -176,7 +176,7 @@ namespace Day7
             ListBox2.Items.Clear();
             ListBox2.Items.Add(TextBox1.Text);
             ListBox2.Items.Add(TextBox2.Text);
-            ListBox2.Items.Add(RadioButtonList1.SelectedItem.Value);
+            ListBox2.Items.Add(RadioButtonList1.SelectedItem.Text);
             ListBox2.Items.Add(TextBox3.Text);
             ListBox2.Items.Add(DropDownList1.SelectedValue);
             ListBox2.Items.Add(ListBox1.SelectedValue);
