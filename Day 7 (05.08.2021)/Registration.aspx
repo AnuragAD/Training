@@ -32,7 +32,7 @@
                          <asp:Label ID="Label3" runat="server" Text="Label">Gender</asp:Label> 
                           <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                               <asp:ListItem Value="1">Male</asp:ListItem>
-                              <asp:ListItem Value="1">Female</asp:ListItem>
+                              <asp:ListItem Value="2">Female</asp:ListItem>
                           </asp:RadioButtonList>
                       </div><br />
                     <div class="form-group">
