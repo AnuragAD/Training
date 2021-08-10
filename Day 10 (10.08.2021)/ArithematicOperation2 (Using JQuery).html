@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title></title>
+    <script>
+        $(document).ready(function () {
+            $("#Arithematic").click(function () {
+                var num1 = parseInt($("#Fnum").val(), 10);
+                var num2 = parseInt($("#Snum").val(), 10);
+                var operator = $("#operators").val();
+                var c;
+                if (operator == '+') {
+                    c = num1 + num2;
+                    $("#result").val(c);
+                }
+                if (operator == '-') {
+                    c = num1 - num2;
+                    $("#result").val(c);
+                }
+                if (operator == '/') {
+                    if (num2 == 0) {
+                        $("#result").val("Not Defined");
+                    }
+                    else
+                        c = num1 / num2;
+                    $("#result").val(c);
+                }
+
+                if (operator == 'X') {
+                    c = num1 * num2;
+                    $("#result").val(c);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card">
+            <div class="card-body">
+                <div class="form-control">
+                    <div class="form-group">
+                        <label>First Number</label>
+                        <input type="text" id="Fnum" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Second Number</label>
+                        <input type="text" id="Snum" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <select id="operators">
+                            <option value="+">Addition</option>
+                            <option value="-">Subtraction</option>
+                            <option value="/">Division</option>
+                            <option value="X">Multiplication</option>
+                        </select>
+                    </div>
+                    <br />
+                    <button class="btn btn-success" id="Arithematic">Submit</button>
+                    <br /><br />
+                    <label>Result:</label>
+                    <input type="text" id="result" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#card").css(
+            {
+                "margin-top": "100px",
+                "padding":    "25px",
+                "background-color": "Coral",
+                "color": "white",
+               "font-size": "25px"
+            }
+        );
+    </script>
+</body>
+</html>
